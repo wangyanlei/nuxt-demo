@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form class="card comment-form">
+    <form class="card comment-form" :disabled="pending" @submit.prevent="onPostComment">
       <div class="card-block">
         <textarea
           class="form-control"
@@ -9,7 +9,7 @@
         ></textarea>
       </div>
       <div class="card-footer">
-        <img src="http://i.imgur.com/Qr71crq.jpg" class="comment-author-img" />
+        <img :src="$store.state.user.image" class="comment-author-img" />
         <button class="btn btn-sm btn-primary">Post Comment</button>
       </div>
     </form>
@@ -49,7 +49,7 @@
 </template>
 
 <script>
-import { getComments } from "@/api/article";
+import { getComments, addComment } from "@/api/article";
 export default {
   name: "ArticleComments",
   props: {
@@ -61,12 +61,21 @@ export default {
   data() {
     return {
       comments: [],
+      pending: false
     };
   },
   async mounted() {
     const { data } = await getComments(this.article.slug);
     this.comments = data.comments;
   },
+  methods: {
+    async onPostComment() {
+      this.pending = true
+      const { data } = await addComment(this.article.slug)
+      console.log('comment: ', data)
+      this.pending = false
+    }
+  }
 };
 </script>
 

@@ -6,46 +6,38 @@
       {
         "path": "",
         "name": "home",
-        "component": "/Users/wyl/lagou/nuxt-learn/pages/home",
-        "_name": "_f0adb73a"
+        "component": "/Users/wyl/lagou/nuxt-learn/pages/home"
       },
       {
         "path": "/login",
         "name": "login",
-        "component": "/Users/wyl/lagou/nuxt-learn/pages/login",
-        "_name": "_6db3b065"
+        "component": "/Users/wyl/lagou/nuxt-learn/pages/login"
       },
       {
         "path": "/register",
         "name": "register",
-        "component": "/Users/wyl/lagou/nuxt-learn/pages/login",
-        "_name": "_6db3b065"
+        "component": "/Users/wyl/lagou/nuxt-learn/pages/login"
       },
       {
-        "path": "/profile/:username",
+        "path": "/profile/:username/:articletype?",
         "name": "profile",
-        "component": "/Users/wyl/lagou/nuxt-learn/pages/profile",
-        "_name": "_aea008b6"
+        "component": "/Users/wyl/lagou/nuxt-learn/pages/profile"
       },
       {
         "path": "/settings",
         "name": "setting",
-        "component": "/Users/wyl/lagou/nuxt-learn/pages/settings",
-        "_name": "_02e0ecb2"
+        "component": "/Users/wyl/lagou/nuxt-learn/pages/settings"
       },
       {
         "path": "/editor",
         "name": "editor",
-        "component": "/Users/wyl/lagou/nuxt-learn/pages/editor",
-        "_name": "_3c367ff1"
+        "component": "/Users/wyl/lagou/nuxt-learn/pages/editor"
       },
       {
         "path": "/article/:slug",
         "name": "article",
-        "component": "/Users/wyl/lagou/nuxt-learn/pages/article",
-        "_name": "_e10b821c"
+        "component": "/Users/wyl/lagou/nuxt-learn/pages/article"
       }
-    ],
-    "_name": "_480559ae"
+    ]
   }
 ]

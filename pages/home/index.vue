@@ -206,7 +206,7 @@ export default {
     const { tags } = tagData.data;
 
     articles.forEach((article) => {
-      return (article.favoriteDisabled = false);
+      article.favoriteDisabled = false;
     });
 
     return {
